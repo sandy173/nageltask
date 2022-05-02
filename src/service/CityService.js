@@ -21,10 +21,11 @@ const updateCity = (params) => {
 
 
 const getCityByName = (params) => {
-    return http.get("/cities/city",{ params, 
-        username: properties.username,
-        password: properties.password
-    });
+    return http.get("/cities/city", {params, 
+        auth :{ 
+            username: properties.username,
+            password: properties.password
+        }});
 }
 
 
